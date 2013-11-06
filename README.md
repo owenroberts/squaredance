@@ -1,2 +1,2 @@
-Code repo for sound-floor project
+Code repo for squaredance project
 
