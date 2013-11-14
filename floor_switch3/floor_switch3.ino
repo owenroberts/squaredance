@@ -13,20 +13,21 @@ void setup()
 void loop() {
   if (Serial.available() > 0) {
     // read the incoming byte:
-    int inByte =Serial.read();
+    int inByte =Serial.read();l
+    
     // read the sensor:
-    sensorValue = digitalRead(A0);
+    sensorValue = digitalRead(2);
     // print the results:
     Serial.print(sensorValue, DEC);
     Serial.print(",");
 
     // read the sensor:
-    sensorValue = digitalRead(A1);
+    sensorValue = digitalRead(4);
     // print the results:
     Serial.print(sensorValue, DEC);
     Serial.print(",");
 
-    sensorValue = digitalRead(A2);
+    sensorValue = digitalRead(7);
     // print the last sensor value with a println() so that
     // each set of four readings prints on a line by itself:
     Serial.println(sensorValue, DEC);

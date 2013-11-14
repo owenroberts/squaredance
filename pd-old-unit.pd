@@ -1,0 +1,25 @@
+#N canvas 190 400 330 394 10;
+#X obj 27 135 soundfiler;
+#X obj 27 41 inlet;
+#X obj -128 22 inlet;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-array 4e+06 float 0;
+#X coords 0 1 4e+06 -1 200 140 1;
+#X restore -127 217 graph;
+#X obj -128 86 tabplay~ \$0-array;
+#X obj 72 45 \$0;
+#X obj 27 72 pack s f;
+#X obj 72 25 loadbang;
+#X obj -123 177 dac~;
+#X msg 26 110 read -resize \$1 \$2-array;
+#X obj -127 52 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 1 0 6 0;
+#X connect 2 0 10 0;
+#X connect 4 0 8 0;
+#X connect 4 0 8 1;
+#X connect 5 0 6 1;
+#X connect 6 0 9 0;
+#X connect 7 0 5 0;
+#X connect 9 0 0 0;
+#X connect 10 0 4 0;
